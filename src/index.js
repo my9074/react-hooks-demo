@@ -6,9 +6,11 @@ import './styles.scss';
 // Helpers
 import Section from './helpers/Section';
 // Examples
-import { Greeting, GreetingClass } from './hooks/UseStateExample';
+import Greeting from './hooks/UseStateExample';
+import GreetingClass from './hooks/WithoutUseState';
 import { Context, ContextClass } from './hooks/UseContextExample';
-import { Title, TitleClass } from './hooks/UseEffectExample';
+import Title from './hooks/UseEffectExample';
+import TitleClass from './hooks/WithoutUseEffect';
 import { CustomHook } from './hooks/UseCustomHooks';
 import PokemonInfo from './hooks/UseReducerExample';
 import Progress from './animations/Progress';
@@ -26,10 +28,7 @@ const VISIBLE = {
 
 class App extends Component {
   state = {
-    isVisible: [
-      VISIBLE.IS_REACT_SPRING_1_VISIBLE,
-      VISIBLE.IS_REACT_SPRING_2_VISIBLE,
-    ],
+    isVisible: [VISIBLE.IS_USE_STATE_VISIBLE, VISIBLE.IS_USE_EFFECT_VISIBLE],
   };
 
   render() {
@@ -42,11 +41,11 @@ class App extends Component {
           sectionBg="purple-bg"
         >
           <div>
-            <h1 className="heading">new way</h1>
+            <h1 className="heading">Use Hook</h1>
             <Greeting />
           </div>
           <div>
-            <h1 className="heading">old way</h1>
+            <h1 className="heading">Class</h1>
             <GreetingClass />
           </div>
         </Section>
@@ -56,11 +55,11 @@ class App extends Component {
           sectionBg="white-bg"
         >
           <div>
-            <h1 className="heading">new way</h1>
+            <h1 className="heading">Use Hook</h1>
             <Context />
           </div>
           <div>
-            <h1 className="heading">old way</h1>
+            <h1 className="heading">Class</h1>
             <ContextClass />
           </div>
         </Section>
@@ -70,11 +69,11 @@ class App extends Component {
           sectionBg="gainsboro-bg"
         >
           <div>
-            <h1 className="heading">new way</h1>
+            <h1 className="heading">Use Hook</h1>
             <Title />
           </div>
           <div>
-            <h1 className="heading">old way</h1>
+            <h1 className="heading">Class</h1>
             <TitleClass />
           </div>
         </Section>
@@ -84,7 +83,7 @@ class App extends Component {
           sectionBg="purple-bg"
         >
           <div>
-            <h1 className="heading">new way</h1>
+            <h1 className="heading">Use Hook</h1>
             <CustomHook />
           </div>
         </Section>
