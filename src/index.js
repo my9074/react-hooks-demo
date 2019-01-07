@@ -6,9 +6,7 @@ import './styles.scss';
 // Helpers
 import Section from './helpers/Section';
 // Examples
-import Greeting from './hooks/UseStateExample';
 import GreetingClass from './hooks/WithoutUseState';
-import Title from './hooks/UseEffectExample';
 import TitleClass from './hooks/WithoutUseEffect';
 
 const VISIBLE = {
@@ -34,10 +32,6 @@ class App extends Component {
             <h1 className="heading">Class</h1>
             <GreetingClass />
           </div>
-          <div>
-            <h1 className="heading">Use Hook</h1>
-            <Greeting />
-          </div>
         </Section>
         <Section
           isVisible={isVisible.includes(VISIBLE.IS_USE_EFFECT_VISIBLE)}
@@ -47,10 +41,6 @@ class App extends Component {
           <div>
             <h1 className="heading">Class</h1>
             <TitleClass />
-          </div>
-          <div>
-            <h1 className="heading">Use Hook</h1>
-            <Title />
           </div>
         </Section>
       </div>
